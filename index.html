@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <title>My Travel Logs</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a class="activated" href="#">Home</a>
+                <a href="guides.html">Guides</a>
+                <a href="flights.html">Flights</a>
+                <a>About</a>
+            </div>
+            <a class="navbar-right button-hover" href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="top-content-back">
+        <div class="top-content">
+            <h1>Travel to your dream destination</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ducimus tempora ipsa iusto rem eligendi quisquam consequatur amet, ea ut laudantium dolorem voluptatum, exercitationem adipisci perspiciatis esse, assumenda quos ex.</p>
+            <img class="image-border" src="https://images.unsplash.com/photo-1696831387823-7cbc60cb5988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1896&q=80">
+            <button class="button" type="button">Reserve Ticket</button>
+        </div>
+    </div>
+    <div class="seperator-content">
+            <h1 class="seperator-content-elements">Create a memory to remember</h1>
+            <p class="seperator-content-elements">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ducimus tempora ipsa iusto rem eligendi quisquam consequatur amet, ea ut laudantium dolorem voluptatum, exercitationem adipisci perspiciatis esse, assumenda quos ex.</p>
+            <button class="button seperator-button seperator-content-elements" type="button">My Travel Logs</button>
+        </div>
+    </div>
+    <div class="stories-content-back">
+        <div class="section-margin stories-content">
+            <div class="card card-one">
+                <img class="image-border" src="images/card1.jpg">
+                <hr/>
+                <h2 class="">Lorem ipsum dolor sit amet</h2>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores earum maiores.</p>
+            </div>
+            <div class="card card-two">
+                <img class="image-border" src="images/card1.jpg">
+                <hr/>
+                <h2 class="">Lorem ipsum dolor sit amet</h2>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores earum maiores.</p>
+            </div>
+            <div class="card card-three">
+                <img class="image-border" src="images/card1.jpg">
+                <hr/>
+                <h2 class="">Lorem ipsum dolor sit amet</h2>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores earum maiores.</p>
+            </div>
+        </div>
+    </div>
+    <div class="quotes-content-back">
+        <div class="section-margin quotes-content">
+            <div class="quotes-title">
+                <img class="quotes-icon" src="images/icon.png">
+                <h1>See places you've never seen before ...</h1>
+            </div>
+            <div class="quotes">
+                <div class="quotes-contents">
+                    <div class="quotes-elements">
+                        <button type="button" class="collapsible">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                        <p class="collapsible-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae cum ipsum provident laborum, ullam molestias a nostrum corrupti inventore ad odit sit nisi magnam voluptatibus assumenda magni ipsa ipsam cumque?</p>
+                    <!-- <button class="expand-button" type="button"></button>-->
+                    </div>
+                    <div class="quotes-elements">
+                        <button type="button" class="collapsible">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                        <p class="collapsible-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae cum ipsum provident laborum, ullam molestias a nostrum corrupti inventore ad odit sit nisi magnam voluptatibus assumenda magni ipsa ipsam cumque?</p>
+                    <!-- <button class="expand-button" type="button"></button>-->
+                    </div>
+                </div>
+                <img class="image-border" src="images/card1.jpg">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>My Log Travels</h1>
+        <h5>Quick links</h5>
+        <div class="column-one">
+            <p>Home</p>
+            <p>About Us</p>
+            <p>My Travel Logs</p>
+        </div>
+        <div class="column-two">
+            <p>Travels</p>
+            <p>Promo Flights</p>
+            <p>Travel Routes</p>
+        </div>
+        <div class="column-three">
+            <p>Recommendations</p>
+            <p>Guides</p>
+            <p>Blogs</p>
+        </div>
+        <div class="column-four">
+            <p>Mission Statement</p>
+            <p>The Team</p>
+            <p>Contact Us</p>
+        </div>
+        <p>2023 - 2024 My Log Travels. All Rights Reserved.</p>
+    </footer>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for(i = 0; i < coll.length; i++){
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display == "block"){
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

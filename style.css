@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Young+Serif&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", Helvetica, sans-serif;
+    color: #2c2c2c;
+    background-image: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebeaeb;
+}
+
+.top-content {
+    margin: 0px 10%;
+}
+
+
+header {
+    top: 0;
+    margin:0;
+    padding: 1% 10%;
+}
+
+h1{
+    font-family: "Young Serif", 'Times New Roman', Times, serif;
+    font-size: 55px;
+    line-height: 1.1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    width: 80%;
+    background-color: #ebeaeb;
+    z-index: 10;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    width: 100%;
+}
+
+.navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.button {
+    font-size: large;
+    border-radius: 9px;
+    font-weight: 800;
+    border: 3px solid #2c2c2c;
+    width: 175px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.navbar-left {
+    width: 40%;
+    color: rgb(84, 84, 84);
+}
+
+.button-hover:hover{
+    color: #ebeaeb;
+    background-color: #2c2c2c;
+}
+
+.navbar-right {
+    border: 3px solid #2c2c2c;
+    padding: 10px 40px;
+    border-radius: 7px;
+}
+
+a, a:visited {
+    color: inherit;
+}
+
+a.activated {
+    color: black;
+    font-weight: 800;
+}
+
+.navbar-left a:hover {
+    text-decoration-line: underline;
+}
+
+.top-content{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "title image"
+    "paragraph image"
+    "button image";
+    gap: 5%;
+}
+
+.top-content h1{
+    grid-area: title;
+}
+
+.top-content p{
+    grid-area: paragraph;
+}
+
+.top-content img{
+    grid-area: image;
+    width: 100%;
+    height: auto;
+}
+
+.image-border {
+    border: 3px solid #2c2c2c;
+    border-radius: 7px;
+}
+
+.top-content button{
+    grid-area: button;
+    width: 225px;
+    background-color: #2c2c2c;
+    color: #ebeaeb;
+}
+
+.top-content-back{
+    padding-bottom: 60px;
+    background-image: url(images/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 100px;
+}
+
+.seperator-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    text-align: center;
+    padding-bottom: 25px;
+    background-image: url(images/back2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.seperator-content-elements {
+    color: #ebeaeb;
+    margin-top: 25px;
+    max-width: 35%;
+}
+
+.seperator-button {
+    border-color: #ebeaeb;
+}
+
+.stories-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "card-one card-two card-three";
+    gap: 5%;
+}
+
+.stories-content h2{
+    grid-area: heading;
+}
+
+.card-one {
+    grid-area: card-one;
+}
+
+.card-two {
+    grid-area: card-two;
+}
+
+.card-three {
+    grid-area: card-three;
+}
+
+.card {
+    display: grid;
+    grid-template-areas:
+    "card-image"
+    "card-line"
+    "card-heading"
+    "card-text";
+    gap: 10px
+}
+
+.card img{
+    grid-area: card-image;
+    width: 100%;
+    height: auto;
+}
+
+.card hr{
+    height: 1px;
+    border: 0;
+    border-top: 5px solid #000;
+    margin: 1em 0;
+    padding: 0;
+    width: 15%;
+}
+
+.card h2{
+    grid-area: card-heading;
+    width: 50%;
+}
+
+.card p{
+    grid-area: card-text;
+}
+
+.stories-content-back{
+    padding-bottom: 60px;
+    background-image: url(images/back3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 100px;
+}
+
+.section-margin {
+    margin: 60px 10%;
+}
+
+.quotes-content{
+    margin-top: 150px;
+}
+
+.quotes-title{
+    text-align: center;
+}
+
+.quotes-title h1{
+    width: 60%;
+    margin: auto;
+}
+
+.quotes-title img{
+    width: 10%;
+    height: auto;
+}
+
+.quotes {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.quotes-contents{
+    width: 70%;
+}
+
+.quotes img{
+    margin: auto;
+    grid-column: 2;
+    grid-row: 1;
+    width: 50%;
+    height: auto;
+}
+
+.collapsible{
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    padding: 18px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.collapsible-content {
+    padding: 18px 18px;
+    width: 25vw;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible:after{
+    content: "\002B";
+    color: #2c2c2c;
+    font-weight: bold;
+    float: right;
+    margin-left: 10px;
+}
+
+.active:after {
+    content: "\2212"; 
+}
+
+footer {
+    background-color: #c4c4c4;
+    padding: 5vw 10vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+    "header links . . ."
+    "header col-one col-two col-three col-four"
+    "copyright copyright copyright copyright copyright";
+    gap: 20px;
+}
+
+footer h1 {
+    grid-area: header;
+    padding: 0 3vw;
+}
+
+footer h5 {
+    grid-area: links;
+}
+
+footer .column-one {
+    grid-area: col-one;
+}
+
+footer .column-two {
+    grid-area: col-two;
+}
+
+footer .column-three {
+    grid-area: col-three;
+}
+
+footer .column-four {
+    grid-area: col-four;
+}
+
+footer p{
+    padding-top: 10px;
+}
+
+footer > p{
+    padding-top: 10vh;
+    text-align: center;
+    grid-area: copyright;
+}
+
+.contact {
+    margin: 100px;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact img {
+    width: 50%;
+    height: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-form textarea{
+    resize: none;
+}
+
+.form-elements {
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 3px;
+    border: 2px solid #2c2c2c;
+}
+
+.contact-form .submit {
+    background-color: #2c2c2c;
+    color: #c4c4c4;
+}
+
+.contact-form label {
+    font-weight: 300;
+}
+
+.top-guides {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.guides-cards-one{
+    grid-column: 1;
+}
+
+.guides-cards-two{
+    grid-column: 2;
+}
+
+.guides-cards-three{
+    grid-column: 3;
+}
+
+.top-guides img{
+    width: 100%;
+}
+
+.guides-navbar a {
+    color: white;
+}
+
+.guides-navbar {
+    background-color: transparent;
+    transition: 0.2s ease-in;
+}
+
+.guides-navbar .navbar-right {
+    color: white;
+    border-color: white;
+}
+
+#guides-contact-button:hover {
+    color: white !important;
+    background-color: black;
+    border-color: black;
+}
+
+.guides-cards {
+    position: relative;
+}
+
+.guides-cards .guides-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .7s ease;
+    backface-visibility: hidden;
+}
+
+.guides-overlay-hover {
+    transition: .7s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.guides-cards:hover .guides-image {
+    opacity: 0.6;
+}
+
+.guides-cards:hover .guides-overlay {
+    opacity: 0;
+}
+
+.guides-cards:hover .guides-overlay-hover {
+    opacity: 1;
+}
+
+.guides-text {
+    color: black;
+}
+
+.guides-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.guides-cards img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.guides-overlay {
+    transition: .7s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    opacity: 0.7;
+}
+
+.quotes-heading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .7s ease;
+    color: white;
+    font-size: 100px;
+}
+
+.top-guides:hover .quotes-heading{
+    opacity: 0.3;
+    color: #000;
+}
+
+.guides-arrow {
+    position: absolute;
+    top: 85%;
+    left: 80%;
+    color: white;
+    font-weight: 900;
+    font-size: 75px;
+}
+
+.guides-content {
+    margin-top: 100px;
+}
+
+.guides-content {
+    grid-template-areas:
+    "heading . ."
+    "card-one card-two card-three";
+}
+
+.flights-content {
+    position: relative;
+    overflow: hidden;
+    background: url(images/map.png);
+    background-size: 125% auto;
+    background-position: 50% 50%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.flights-content h1{
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+}
+
+.flights-elements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    ". uk . ."
+    "usa france . japan"
+    ". . . china"
+    "mexico . india ."
+    ". brazil . ."
+    ". . south-africa australia";
+    margin: 15% 20% 0;
+}
+
+.flights-card-container:nth-child(1){
+    grid-area: usa;
+    padding-right: 10%;
+}
+
+.flights-card-container:nth-child(2){
+    grid-area: france;
+}
+
+.flights-card-container:nth-child(3){
+    grid-area: china;
+}
+
+.flights-card-container:nth-child(4){
+    grid-area: mexico;
+    padding-left: 20px;
+}
+
+.flights-card-container:nth-child(5){
+    grid-area: india;
+    padding-left: 20px;
+}
+
+.flights-card-container:nth-child(6){
+    grid-area: japan;
+}
+
+.flights-card-container:nth-child(7){
+    margin-top: 10%;
+    grid-area: brazil;
+}
+
+.flights-card-container:nth-child(8){
+    grid-area: south-africa;
+}
+
+.flights-card-container:nth-child(9){
+    grid-area: australia;
+}
+
+.flights-card-container:nth-child(10){
+    grid-area: uk;
+}
+
+.flights-card-container{
+    width: 100%;
+    position: relative;
+}
+
+.flights-card-container:nth-child(1) .flights-card{
+    background: url(images/New_York_City_Statue_of_Liberty.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-left: auto;
+}
+
+.flights-card-container:nth-child(2) .flights-card{
+    background: url(images/paris_architecture_francejpg.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-left: auto;
+}
+
+.flights-card-container:nth-child(3) .flights-card{
+    background: url(images/china-great-wall.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-right: auto;
+}
+
+.flights-card-container:nth-child(4) .flights-card{
+    background: url(images/the-mayan-pyramid-in-chichen-itza-mexico.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-left: auto;
+}
+
+.flights-card-container:nth-child(5) .flights-card{
+    background: url(images/india-tajmahal.avif);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-left: auto;
+}
+
+.flights-card-container:nth-child(6) .flights-card{
+    background: url(images/japan.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin: auto;
+}
+
+
+.flights-card-container:nth-child(7) .flights-card{
+    background: url(images/brazil-rio-de-janeiro.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-right: auto;
+}
+
+.flights-card-container:nth-child(8) .flights-card{
+    background: url(images/south-africa-johannesbourg-monument-1536x1024.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-right: auto;
+}
+
+.flights-card-container:nth-child(9) .flights-card{
+    background: url(images/Sydney-Opera-House-Port-Jackson.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin: auto;
+}
+
+.flights-card-container:nth-child(10) .flights-card{
+    background: url(images/United_Kingdom.jpg);
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 4px solid white;
+    margin-left: auto;
+}
+
+.flights-card-container p{
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.center-align p{
+    position: absolute;
+    top: 90%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+}
+
+.right-align p{
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.left-align p{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.flights-card-container:nth-child(1) p{
+    left: 60%;
+}
+
+.flights-card-container:nth-child(4) p{
+    left: 72%;
+}
+
+
