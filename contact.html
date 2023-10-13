@@ -8,18 +8,23 @@
     <title>My Travel Logs</title>
 </head>
 <body>
-    <header>
+    <header id="navbar" class="guides-navbar">
         <nav class="navbar">
             <div class="navbar-left">
-                <a href="index.html">Home</a>
-                <a href="guides.html">Guides</a>
-                <a>Flights</a>
-                <a>About</a>
+                <a class="navbar-elements" href="index.html">Home</a>
+                <a class="navbar-elements activated" href="#">Guides</a>
+                <a class="navbar-elements" href="Flights.html">Flights</a>
+                <a class="navbar-elements" href="about.html">About</a>
             </div>
-            <a class="navbar-right button-hover" href="contact.html">Contact Us</a>
+            <a id="guides-contact-button" class="navbar-right button-hover" href="contact.html">Contact Us</a>
         </nav>
     </header>
-    <div class="contact">
+    <div style="position: relative;" class="contact">
+        
+        <video autoplay="" loop="" id="expert-video" muted="" playsinline="">
+            <source src="videos/guides.mp4" type="video/mp4">
+        </video>
+        <div id="contact-overlay"></div>
         <form class="contact-form" action="" method="get" class="form-example">
             <h1>Be Updated!</h1>
             <input class="form-elements" type="text" name="name" placeholder="First Name *" required>
@@ -28,7 +33,13 @@
             <textarea class="form-elements" rows="6" cols="33" name="message">Write something here...</textarea>
             <input class="form-elements submit" type="submit" value="Submit Email">
         </form>
-        <img class="image-border" src="images/test.png">
+    </div>
+    <div class="newsletter">
+        <form action="">
+            <h2>Subscribe to our newsletter</h2>
+            <input class="newsletter-input" type="email" placeholder="Input Email">
+            <input class="newsletter-submit" type="submit" value="Subscribe">
+        </form>
     </div>
     <footer>
         <h1>My Log Travels</h1>
@@ -55,5 +66,28 @@
         </div>
         <p>2023 - 2024 My Log Travels. All Rights Reserved.</p>
     </footer>
+    
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var element = document.getElementsByClassName("navbar-elements");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.backgroundColor = "white";
+                document.getElementById("guides-contact-button").style.color = "black";
+                document.getElementById("guides-contact-button").style.borderColor = "black";
+                for(var i = 0; i < element.length; i++){
+                    element[i].style.color = "black";
+                }
+            } else {
+                document.getElementById("navbar").style.backgroundColor = "transparent";
+                document.getElementById("guides-contact-button").style.color = "white";
+                document.getElementById("guides-contact-button").style.borderColor = "white";
+                for(var i = 0; i < element.length; i++){
+                    element[i].style.color = "white";
+                }
+            }
+        } 
+    </script>
 </body>
 </html>

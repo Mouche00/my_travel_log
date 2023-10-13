@@ -12,9 +12,9 @@
         <nav class="navbar">
             <div class="navbar-left">
                 <a class="navbar-elements" href="index.html">Home</a>
-                <a class="navbar-elements" href="guides.html">Guides</a>
+                <a class="navbar-elements activated" href="#">Guides</a>
                 <a class="navbar-elements" href="Flights.html">Flights</a>
-                <a class="navbar-elements">About</a>
+                <a class="navbar-elements" href="about.html">About</a>
             </div>
             <a id="guides-contact-button" class="navbar-right button-hover" href="contact.html">Contact Us</a>
         </nav>
@@ -55,26 +55,42 @@
         </div>
         <h1 class="quotes-heading">Disocover with us.</h1>
     </div>
-    <div class="section-margin stories-content guides-content">
-        <h2>What do you seek?</h2>
-        <div class="card card-one">
-            <img class="image-border" src="images/card1.jpg">
-            <hr/>
-            <h2 class="">Lorem ipsum dolor sit amet</h2>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores earum maiores.</p>
+    <div style="overflow: hidden;" class="section-margin stories-content guides-content">
+        <div class="guides-sort">
+            <h2>Do you seek more?</h2>
+            <label>Sort By:</label>
+            <select name="" id="">
+                <option value="">Most Popular</option>
+                <option value="">Most Visited</option>
+                <option value="">Best Reviewd</option>
+                <option value="">Newest</option>
+            </select>
         </div>
-        <div class="card card-two">
-            <img class="image-border" src="images/card1.jpg">
-            <hr/>
-            <h2 class="">Lorem ipsum dolor sit amet</h2>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores earum maiores.</p>
+        <div class="slideshow">
+            <div class="guides-card card card-one">
+                <img class="" src="images/lakes.jpg">
+                <h2 class="">Lakes</h2>
+            </div>
+            <div class="guides-card card card-two">
+                <img class="" src="images/underwater.jpg">
+                <h2 class="">Underwater Locations</h2>
+            </div>
+            <div class="guides-card card card-three">
+                <img class="" src="images/city.jpg">
+                <h2 class="">Urban Locations</h2>
+            </div>
+            <div class="guides-card card">
+                <img class="" src="images/underground.jpg">
+                <h2 class="">Underground Locations</h2>
+            </div>
         </div>
-        <div class="card card-three">
-            <img class="image-border" src="images/card1.jpg">
-            <hr/>
-            <h2 class="">Lorem ipsum dolor sit amet</h2>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum asperiores earum maiores.</p>
-        </div>
+    </div>
+    <div class="newsletter">
+        <form action="">
+            <h2>Subscribe to our newsletter</h2>
+            <input class="newsletter-input" type="email" placeholder="Input Email">
+            <input class="newsletter-submit" type="submit" value="Subscribe">
+        </form>
     </div>
     <footer>
         <h1>My Log Travels</h1>
